@@ -1,0 +1,136 @@
+html{
+box-sizing: border-box;
+scroll-snap-type: y mandatory;
+font-size: 62,5%;
+background-color: beige;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+h1, h2, h3, h4{
+    text-transform: uppercase;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.h1{
+    font-size: 13.4vw; 
+    margin: 0;
+    text-align: center;
+    line-height: 12vw;
+    scroll-snap-align: start;
+    color: rgb(30, 30, 30);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro{
+    width: 50vw;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.container-img-leonardo{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    z-index: 500;
+}
+
+
+.container-img-leonardo p{
+    background-color: beige;
+    padding: 4px 8px;
+    font-size: small;
+    border-radius: 8px;
+    color: black;
+    margin-top: -40px;
+    z-index: 1000;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.img1-leonardo{
+    width: 34%;
+    scroll-snap-align: start;
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-duration: 830ms;
+}
+
+.texto-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.juventud, .obras{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding: 40px 10vw;
+    width: 100%;
+    background-color: white;
+    scroll-snap-align: start;
+    z-index: 1000;
+    justify-content: space-around;
+    position: relative;
+}
+
+.promo{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.parrafo{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.parrafo p{
+    width: 400px;
+}
+
+.slider{
+    display: flex;
+    max-width: 300px;
+    height: 500px;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.slider img{
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+/**EXPERIMENTACIÓN**/
+
+@keyframes show {
+    from{
+        opacity: 0.4;
+        scale: 50%;
+    }
+
+    to{
+        opacity: 1;
+        scale: 110%;
+    }
+}
